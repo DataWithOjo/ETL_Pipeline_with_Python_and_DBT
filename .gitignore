@@ -1,3 +1,4 @@
 Raw/
 __pycache__
 *.env
+logs/

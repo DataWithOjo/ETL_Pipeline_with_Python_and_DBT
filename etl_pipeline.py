@@ -30,7 +30,7 @@ def get_source_data():
         return None
     
 def convert_data(file_path):
-    # Reads the csv file from folder "Raw" into pandas Dataframe. Performs transformation
+    # Reads the csv file from folder "Raw" into pandas Dataframe
     
     print("Starting Conversion")
     try:
