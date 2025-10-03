@@ -15,5 +15,5 @@ database_url = f"postgresql+psycopg2://{DB_USER}:{DB_PASSWORD}@{DB_HOST}:{DB_POR
 
 source_url = "https://www.stats.govt.nz/assets/Uploads/Annual-enterprise-survey/Annual-enterprise-survey-2023-financial-year-provisional/Download-data/annual-enterprise-survey-2023-financial-year-provisional.csv"
 source_folder = "Raw"
-schema_name = "dev"
+schema_name = "dev_staging"
 table_name = "finance_2023"
