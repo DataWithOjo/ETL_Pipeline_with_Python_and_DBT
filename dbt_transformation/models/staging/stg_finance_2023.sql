@@ -6,7 +6,7 @@ with source as (
 renamed as (
     select
         year,
-        value::bigint,
+        value,
         units,
         variable_code
     from source
