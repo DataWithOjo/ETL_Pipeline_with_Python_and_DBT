@@ -36,6 +36,9 @@ def convert_data(file_path):
     try:
         finance_data = pd.read_csv(file_path)
         print("Successfully read the csv data")
+        
+        # Convert all column names to lowercase
+        finance_data.columns = finance_data.columns.str.lower()
         return finance_data
     
     except FileNotFoundError:
