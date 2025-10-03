@@ -39,6 +39,7 @@ def convert_data(file_path):
         
         # Convert all column names to lowercase
         finance_data.columns = finance_data.columns.str.lower()
+        print("Transformed all Columns to Lower case")
         return finance_data
     
     except FileNotFoundError:
