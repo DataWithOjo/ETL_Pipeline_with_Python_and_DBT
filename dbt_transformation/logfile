@@ -1,0 +1,14 @@
+2025-10-05 04:54:30.356 WAT [312] LOG:  starting PostgreSQL 18.0 on x86_64-conda-linux-gnu, compiled by x86_64-conda-linux-gnu-cc (conda-forge gcc 14.3.0-5) 14.3.0, 64-bit
+2025-10-05 04:54:30.357 WAT [312] LOG:  listening on IPv4 address "127.0.0.1", port 5432
+2025-10-05 04:54:30.367 WAT [312] LOG:  listening on Unix socket "/tmp/.s.PGSQL.5432"
+2025-10-05 04:54:30.384 WAT [318] LOG:  database system was shut down at 2025-10-05 04:53:59 WAT
+2025-10-05 04:54:30.395 WAT [312] LOG:  database system is ready to accept connections
+2025-10-05 04:54:42.789 WAT [323] FATAL:  database "ojo_dev" does not exist
+2025-10-05 04:55:12.175 WAT [328] FATAL:  role "postgres" does not exist
+2025-10-05 04:55:12.181 WAT [329] FATAL:  role "postgres" does not exist
+2025-10-05 04:58:17.553 WAT [337] FATAL:  database "posey" does not exist
+2025-10-05 04:59:30.483 WAT [316] LOG:  checkpoint starting: time
+2025-10-05 04:59:35.162 WAT [316] LOG:  checkpoint complete: wrote 46 buffers (0.3%), wrote 3 SLRU buffers; 0 WAL file(s) added, 0 removed, 0 recycled; write=4.625 s, sync=0.027 s, total=4.680 s; sync files=15, longest=0.015 s, average=0.002 s; distance=320 kB, estimate=320 kB; lsn=0/17ACF98, redo lsn=0/17ACF40
+2025-10-05 06:09:42.508 WAT [1118] FATAL:  database "posey" does not exist
+2025-10-05 06:14:31.404 WAT [316] LOG:  checkpoint starting: time
+2025-10-05 06:14:31.618 WAT [316] LOG:  checkpoint complete: wrote 1 buffers (0.0%), wrote 0 SLRU buffers; 0 WAL file(s) added, 0 removed, 0 recycled; write=0.122 s, sync=0.026 s, total=0.214 s; sync files=1, longest=0.026 s, average=0.026 s; distance=2 kB, estimate=289 kB; lsn=0/17AD9E0, redo lsn=0/17AD988

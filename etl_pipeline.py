@@ -32,14 +32,14 @@ def get_source_data():
 def convert_data(file_path):
     # Reads the csv file from folder "Raw" into pandas Dataframe
     
-    print("Starting Conversion")
+    print("Starting Conversion to Dataframe")
     try:
         finance_data = pd.read_csv(file_path)
         print("Successfully read the csv data")
         
         # Convert all column names to lowercase
         finance_data.columns = finance_data.columns.str.lower()
-        print("Transformed all Columns to Lower case")
+        print("Transformed all Column names to Lower case")
         return finance_data
     
     except FileNotFoundError:
