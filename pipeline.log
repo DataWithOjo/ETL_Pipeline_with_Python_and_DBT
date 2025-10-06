@@ -1,41 +1,40 @@
-
-Sun Oct  5 14:37:14 WAT 2025: Pipeline completed successfully.
-===== Pipeline started at Sun Oct  5 14:54:03 WAT 2025 =====
+===== Pipeline started at Mon Oct  6 11:09:05 WAT 2025 =====
 Detected WSL Ubuntu. Configuring Conda paths.
 DB_HOST set to 192.168.160.1
 Starting Python ETL script...
 Starting download process
 Created Destination folder Raw
 Download successful: 'Raw/annual-enterprise-survey-2023-financial-year-provisional.csv' created
-Starting Conversion
+Starting Conversion to Dataframe
 Successfully read the csv data
-Transformed all Columns to Lower case
+Transformed all Column names to Lower case
 Start loading data into PostgreSQL table 'dev_staging.finance_2023'
 Schema 'dev_staging' created successfully.
 Loading successful: Data written to 'dev_staging.finance_2023'.
 
 Starting dbt transformation...
-[0m13:54:35  Running with dbt=1.10.13
-[0m13:54:36  Registered adapter: postgres=1.9.1
-[0m13:54:37  Found 2 models, 3 data tests, 1 source, 447 macros
-[0m13:54:37  
-[0m13:54:37  Concurrency: 1 threads (target='dev')
-[0m13:54:37  
-[0m13:54:38  1 of 5 START test source_not_null_finance_finance_2023_value ................... [RUN]
-[0m13:54:38  1 of 5 PASS source_not_null_finance_finance_2023_value ......................... [[32mPASS[0m in 0.26s]
-[0m13:54:38  2 of 5 START test source_not_null_finance_finance_2023_variable_code ........... [RUN]
-[0m13:54:38  2 of 5 PASS source_not_null_finance_finance_2023_variable_code ................. [[32mPASS[0m in 0.16s]
-[0m13:54:38  3 of 5 START test source_not_null_finance_finance_2023_year .................... [RUN]
-[0m13:54:38  3 of 5 PASS source_not_null_finance_finance_2023_year .......................... [[32mPASS[0m in 0.14s]
-[0m13:54:38  4 of 5 START sql table model dev_staging.stg_finance_2023 ...................... [RUN]
-[0m13:54:39  4 of 5 OK created sql table model dev_staging.stg_finance_2023 ................. [[32mSELECT 50985[0m in 0.66s]
-[0m13:54:39  5 of 5 START sql table model dev_staging.fct_finance_2023 ...................... [RUN]
-[0m13:54:39  5 of 5 OK created sql table model dev_staging.fct_finance_2023 ................. [[32mSELECT 50985[0m in 0.55s]
-[0m13:54:40  
-[0m13:54:40  Finished running 2 table models, 3 data tests in 0 hours 0 minutes and 2.58 seconds (2.58s).
-[0m13:54:40  
-[0m13:54:40  [32mCompleted successfully[0m
-[0m13:54:40  
-[0m13:54:40  Done. PASS=5 WARN=0 ERROR=0 SKIP=0 NO-OP=0 TOTAL=5
+[0m10:09:41  Running with dbt=1.10.13
+[0m10:09:41  Registered adapter: postgres=1.9.1
+[0m10:09:42  Unable to do partial parsing because profile has changed
+[0m10:09:49  Found 2 models, 3 data tests, 1 source, 447 macros
+[0m10:09:49  
+[0m10:09:49  Concurrency: 1 threads (target='dev')
+[0m10:09:49  
+[0m10:09:50  1 of 5 START test source_not_null_finance_finance_2023_value ................... [RUN]
+[0m10:09:50  1 of 5 PASS source_not_null_finance_finance_2023_value ......................... [[32mPASS[0m in 0.38s]
+[0m10:09:50  2 of 5 START test source_not_null_finance_finance_2023_variable_code ........... [RUN]
+[0m10:09:50  2 of 5 PASS source_not_null_finance_finance_2023_variable_code ................. [[32mPASS[0m in 0.19s]
+[0m10:09:50  3 of 5 START test source_not_null_finance_finance_2023_year .................... [RUN]
+[0m10:09:51  3 of 5 PASS source_not_null_finance_finance_2023_year .......................... [[32mPASS[0m in 0.36s]
+[0m10:09:51  4 of 5 START sql table model dev_staging.stg_finance_2023 ...................... [RUN]
+[0m10:09:51  4 of 5 OK created sql table model dev_staging.stg_finance_2023 ................. [[32mSELECT 50985[0m in 0.82s]
+[0m10:09:51  5 of 5 START sql table model dev_staging.fct_finance_2023 ...................... [RUN]
+[0m10:09:52  5 of 5 OK created sql table model dev_staging.fct_finance_2023 ................. [[32mSELECT 50985[0m in 0.71s]
+[0m10:09:52  
+[0m10:09:52  Finished running 2 table models, 3 data tests in 0 hours 0 minutes and 3.71 seconds (3.71s).
+[0m10:09:53  
+[0m10:09:53  [32mCompleted successfully[0m
+[0m10:09:53  
+[0m10:09:53  Done. PASS=5 WARN=0 ERROR=0 SKIP=0 NO-OP=0 TOTAL=5
 
-Sun Oct  5 14:54:42 WAT 2025: Pipeline completed successfully.
+Mon Oct  6 11:09:56 WAT 2025: Pipeline completed successfully.

@@ -1,0 +1,349 @@
+===== Pipeline started at Mon Oct  6 12:09:06 WAT 2025 =====
+time="2025-10-06T12:09:06+01:00" level=warning msg="/mnt/c/Users/USER/Documents/CDE-course-material/Assignment/ETL_Pipeline_with_Python_and_DBT/docker-compose.yml: the attribute `version` is obsolete, it will be ignored, please remove it to avoid potential confusion"
+Compose can now delegate builds to bake for better performance.
+ To do so, set COMPOSE_BAKE=true.
+#0 building with "default" instance using docker driver
+
+#1 [python_etl_runner internal] load build definition from Dockerfile
+#1 transferring dockerfile: 447B 0.1s done
+#1 DONE 0.1s
+
+#2 [python_etl_runner auth] library/python:pull token for registry-1.docker.io
+#2 DONE 0.0s
+
+#3 [python_etl_runner internal] load metadata for docker.io/library/python:3.10-bookworm
+#3 DONE 1.5s
+
+#4 [python_etl_runner internal] load .dockerignore
+#4 transferring context: 108B 0.0s done
+#4 DONE 0.1s
+
+#5 [python_etl_runner internal] load build context
+#5 ...
+
+#6 [python_etl_runner 1/5] FROM docker.io/library/python:3.10-bookworm@sha256:ee0c7d26e2dba416773cb51c042496e9cffacc872459f57726935dd6833f2d96
+#6 resolve docker.io/library/python:3.10-bookworm@sha256:ee0c7d26e2dba416773cb51c042496e9cffacc872459f57726935dd6833f2d96 0.1s done
+#6 DONE 0.1s
+
+#5 [python_etl_runner internal] load build context
+#5 transferring context: 2.27MB 1.9s done
+#5 DONE 1.9s
+
+#7 [python_etl_runner 3/5] COPY requirements.txt .
+#7 CACHED
+
+#8 [python_etl_runner 2/5] WORKDIR /app
+#8 CACHED
+
+#9 [python_etl_runner 4/5] RUN pip install --no-cache-dir -r requirements.txt
+#9 CACHED
+
+#10 [python_etl_runner 5/5] COPY . .
+#10 DONE 0.2s
+
+#11 [python_etl_runner] exporting to image
+#11 exporting layers
+#11 exporting layers 0.4s done
+#11 exporting manifest sha256:0a5b7886514fcc7ef6b9653cbd81c3762977a5ef01dce1116d51c38c9b3fb067 0.0s done
+#11 exporting config sha256:81e8c6ff32285a814af62de07d1542fa4ef37cc6effcb72a1bda3ff04ecd5f61 0.0s done
+#11 exporting attestation manifest sha256:74a9cc5e953613e85f0830c45dd73fa5cc06989813be525e6ca3c624ee697e9a 0.1s done
+#11 exporting manifest list sha256:fe4e9481860e4a2c323ae8c6e3d950c524a8fee41ee940797db06e40c3bf8e61
+#11 exporting manifest list sha256:fe4e9481860e4a2c323ae8c6e3d950c524a8fee41ee940797db06e40c3bf8e61 0.0s done
+#11 naming to docker.io/library/etl_pipeline_with_python_and_dbt-python_etl_runner:latest done
+#11 unpacking to docker.io/library/etl_pipeline_with_python_and_dbt-python_etl_runner:latest
+#11 unpacking to docker.io/library/etl_pipeline_with_python_and_dbt-python_etl_runner:latest 0.2s done
+#11 DONE 0.8s
+
+#12 [python_etl_runner] resolving provenance for metadata file
+#12 DONE 0.0s
+
+#13 [dbt_runner internal] load build definition from Dockerfile
+#13 transferring dockerfile: 228B 0.0s done
+#13 DONE 0.1s
+
+#14 [dbt_runner internal] load metadata for docker.io/library/python:3.10-slim
+#14 DONE 0.4s
+
+#15 [dbt_runner internal] load .dockerignore
+#15 transferring context: 106B 0.0s done
+#15 DONE 0.1s
+
+#16 [dbt_runner internal] load build context
+#16 transferring context: 739B 0.1s done
+#16 DONE 0.2s
+
+#17 [dbt_runner 1/4] FROM docker.io/library/python:3.10-slim@sha256:77f72bc159950ab208b8bbb9a7b22868984e004ce62966d1ca9268c346c73c64
+#17 resolve docker.io/library/python:3.10-slim@sha256:77f72bc159950ab208b8bbb9a7b22868984e004ce62966d1ca9268c346c73c64 0.1s done
+#17 DONE 0.1s
+
+#18 [dbt_runner 3/4] RUN pip install dbt-core dbt-postgres
+#18 CACHED
+
+#19 [dbt_runner 2/4] WORKDIR /app/dbt_transformation
+#19 CACHED
+
+#20 [dbt_runner 4/4] COPY . .
+#20 CACHED
+
+#21 [dbt_runner] exporting to image
+#21 exporting layers done
+#21 exporting manifest sha256:39d0ed8b2971304660cbc2312a896ed78745e19cc0a46e665aead248605025d2 0.0s done
+#21 exporting config sha256:aa4db67d80bfe1588f4e5070996575e9c7fdfeca386c1f46d184e10061337bed 0.0s done
+#21 exporting attestation manifest sha256:c2b3f84a6c1913a728fabea1e5a17fedfe70f9957cb497de982985806c14cead 0.1s done
+#21 exporting manifest list sha256:ccdae40f45bfa72349bad7cc0ffad68c17909e1ef06655be5d3475b17c25586f
+#21 exporting manifest list sha256:ccdae40f45bfa72349bad7cc0ffad68c17909e1ef06655be5d3475b17c25586f 0.0s done
+#21 naming to docker.io/library/etl_pipeline_with_python_and_dbt-dbt_runner:latest 0.0s done
+#21 unpacking to docker.io/library/etl_pipeline_with_python_and_dbt-dbt_runner:latest 0.0s done
+#21 DONE 0.3s
+
+#22 [dbt_runner] resolving provenance for metadata file
+#22 DONE 0.0s
+ dbt_runner  Built
+ python_etl_runner  Built
+ Container postgres_db  Recreate
+postgres_db        | 2025-10-06 11:09:15.917 UTC [1] LOG:  received fast shutdown request
+postgres_db        | 2025-10-06 11:09:15.917 UTC [1] LOG:  received fast shutdown request
+postgres_db        | 2025-10-06 11:09:15.917 UTC [1] LOG:  received fast shutdown request
+postgres_db        | 2025-10-06 11:09:15.954 UTC [1] LOG:  aborting any active transactions
+postgres_db        | 2025-10-06 11:09:15.954 UTC [1] LOG:  aborting any active transactions
+postgres_db        | 2025-10-06 11:09:15.954 UTC [1] LOG:  aborting any active transactions
+postgres_db        | 2025-10-06 11:09:16.022 UTC [1] LOG:  background worker "logical replication launcher" (PID 31) exited with exit code 1
+postgres_db        | 2025-10-06 11:09:16.022 UTC [1] LOG:  background worker "logical replication launcher" (PID 31) exited with exit code 1
+postgres_db        | 2025-10-06 11:09:16.022 UTC [1] LOG:  background worker "logical replication launcher" (PID 31) exited with exit code 1
+postgres_db        | 2025-10-06 11:09:16.254 UTC [437] FATAL:  the database system is shutting down
+postgres_db        | 2025-10-06 11:09:16.254 UTC [437] FATAL:  the database system is shutting down
+postgres_db        | 2025-10-06 11:09:16.254 UTC [437] FATAL:  the database system is shutting down
+postgres_db        | 2025-10-06 11:09:16.268 UTC [26] LOG:  checkpoint complete: wrote 2059 buffers (12.6%); 0 WAL file(s) added, 0 removed, 1 recycled; write=205.521 s, sync=0.169 s, total=205.763 s; sync files=40, longest=0.029 s, average=0.005 s; distance=20264 kB, estimate=20264 kB; lsn=0/8FE6770, redo lsn=0/8FE66E0
+postgres_db        | 2025-10-06 11:09:16.268 UTC [26] LOG:  shutting down
+postgres_db        | 2025-10-06 11:09:16.268 UTC [26] LOG:  checkpoint complete: wrote 2059 buffers (12.6%); 0 WAL file(s) added, 0 removed, 1 recycled; write=205.521 s, sync=0.169 s, total=205.763 s; sync files=40, longest=0.029 s, average=0.005 s; distance=20264 kB, estimate=20264 kB; lsn=0/8FE6770, redo lsn=0/8FE66E0
+postgres_db        | 2025-10-06 11:09:16.268 UTC [26] LOG:  shutting down
+postgres_db        | 2025-10-06 11:09:16.268 UTC [26] LOG:  checkpoint complete: wrote 2059 buffers (12.6%); 0 WAL file(s) added, 0 removed, 1 recycled; write=205.521 s, sync=0.169 s, total=205.763 s; sync files=40, longest=0.029 s, average=0.005 s; distance=20264 kB, estimate=20264 kB; lsn=0/8FE6770, redo lsn=0/8FE66E0
+postgres_db        | 2025-10-06 11:09:16.268 UTC [26] LOG:  shutting down
+postgres_db        | 2025-10-06 11:09:16.289 UTC [26] LOG:  checkpoint starting: shutdown immediate
+postgres_db        | 2025-10-06 11:09:16.289 UTC [26] LOG:  checkpoint starting: shutdown immediate
+postgres_db        | 2025-10-06 11:09:16.289 UTC [26] LOG:  checkpoint starting: shutdown immediate
+postgres_db        | 2025-10-06 11:09:16.364 UTC [26] LOG:  checkpoint complete: wrote 0 buffers (0.0%); 0 WAL file(s) added, 0 removed, 0 recycled; write=0.011 s, sync=0.001 s, total=0.096 s; sync files=0, longest=0.000 s, average=0.000 s; distance=0 kB, estimate=18238 kB; lsn=0/8FE67E8, redo lsn=0/8FE67E8
+postgres_db        | 2025-10-06 11:09:16.364 UTC [26] LOG:  checkpoint complete: wrote 0 buffers (0.0%); 0 WAL file(s) added, 0 removed, 0 recycled; write=0.011 s, sync=0.001 s, total=0.096 s; sync files=0, longest=0.000 s, average=0.000 s; distance=0 kB, estimate=18238 kB; lsn=0/8FE67E8, redo lsn=0/8FE67E8
+postgres_db        | 2025-10-06 11:09:16.364 UTC [26] LOG:  checkpoint complete: wrote 0 buffers (0.0%); 0 WAL file(s) added, 0 removed, 0 recycled; write=0.011 s, sync=0.001 s, total=0.096 s; sync files=0, longest=0.000 s, average=0.000 s; distance=0 kB, estimate=18238 kB; lsn=0/8FE67E8, redo lsn=0/8FE67E8
+postgres_db        | 2025-10-06 11:09:16.383 UTC [1] LOG:  database system is shut down
+postgres_db        | 2025-10-06 11:09:16.383 UTC [1] LOG:  database system is shut down
+postgres_db        | 2025-10-06 11:09:16.383 UTC [1] LOG:  database system is shut down
+
+[Kpostgres_db exited with code 0
+
+[Kpostgres_db has been recreated
+
+[Kpostgres_db exited with code 0
+
+[Kpostgres_db has been recreated
+
+[Kpostgres_db exited with code 0
+
+[Kpostgres_db has been recreated
+ Container postgres_db  Recreated
+ Container python_etl_runner  Recreate
+ Container python_etl_runner  Recreated
+ Container dbt_runner  Recreate
+ Container dbt_runner  Recreated
+Attaching to dbt_runner, postgres_db, python_etl_runner
+postgres_db        | 
+postgres_db        | PostgreSQL Database directory appears to contain a database; Skipping initialization
+postgres_db        | 
+postgres_db        | 2025-10-06 11:09:21.872 UTC [1] LOG:  starting PostgreSQL 17.6 (Debian 17.6-2.pgdg13+1) on x86_64-pc-linux-gnu, compiled by gcc (Debian 14.2.0-19) 14.2.0, 64-bit
+postgres_db        | 2025-10-06 11:09:21.873 UTC [1] LOG:  listening on IPv4 address "0.0.0.0", port 5432
+postgres_db        | 2025-10-06 11:09:21.873 UTC [1] LOG:  listening on IPv6 address "::", port 5432
+postgres_db        | 2025-10-06 11:09:21.872 UTC [1] LOG:  starting PostgreSQL 17.6 (Debian 17.6-2.pgdg13+1) on x86_64-pc-linux-gnu, compiled by gcc (Debian 14.2.0-19) 14.2.0, 64-bit
+postgres_db        | 2025-10-06 11:09:21.873 UTC [1] LOG:  listening on IPv4 address "0.0.0.0", port 5432
+postgres_db        | 2025-10-06 11:09:21.873 UTC [1] LOG:  listening on IPv6 address "::", port 5432
+postgres_db        | 2025-10-06 11:09:21.945 UTC [1] LOG:  listening on Unix socket "/var/run/postgresql/.s.PGSQL.5432"
+postgres_db        | 2025-10-06 11:09:21.945 UTC [1] LOG:  listening on Unix socket "/var/run/postgresql/.s.PGSQL.5432"
+postgres_db        | 2025-10-06 11:09:21.945 UTC [1] LOG:  listening on Unix socket "/var/run/postgresql/.s.PGSQL.5432"
+postgres_db        | 2025-10-06 11:09:21.945 UTC [1] LOG:  listening on Unix socket "/var/run/postgresql/.s.PGSQL.5432"
+postgres_db        | 2025-10-06 11:09:22.028 UTC [30] LOG:  database system was shut down at 2025-10-06 11:09:16 UTC
+postgres_db        | 2025-10-06 11:09:22.028 UTC [30] LOG:  database system was shut down at 2025-10-06 11:09:16 UTC
+postgres_db        | 2025-10-06 11:09:22.028 UTC [30] LOG:  database system was shut down at 2025-10-06 11:09:16 UTC
+postgres_db        | 2025-10-06 11:09:22.028 UTC [30] LOG:  database system was shut down at 2025-10-06 11:09:16 UTC
+postgres_db        | 2025-10-06 11:09:22.099 UTC [1] LOG:  database system is ready to accept connections
+postgres_db        | 2025-10-06 11:09:22.099 UTC [1] LOG:  database system is ready to accept connections
+postgres_db        | 2025-10-06 11:09:22.099 UTC [1] LOG:  database system is ready to accept connections
+postgres_db        | 2025-10-06 11:09:22.099 UTC [1] LOG:  database system is ready to accept connections
+python_etl_runner  | Starting download process
+python_etl_runner  | Starting download process
+python_etl_runner  | Created Destination folder Raw
+python_etl_runner  | Download successful: 'Raw/annual-enterprise-survey-2023-financial-year-provisional.csv' created
+python_etl_runner  | Starting Conversion to Dataframe
+python_etl_runner  | Successfully read the csv data
+python_etl_runner  | Starting download process
+python_etl_runner  | Created Destination folder Raw
+python_etl_runner  | Download successful: 'Raw/annual-enterprise-survey-2023-financial-year-provisional.csv' created
+python_etl_runner  | Starting Conversion to Dataframe
+python_etl_runner  | Successfully read the csv data
+python_etl_runner  | Transformed all Column names to Lower case
+python_etl_runner  | Start loading data into PostgreSQL table 'dev_staging.finance_2023'
+python_etl_runner  | Schema 'dev_staging' created successfully.
+python_etl_runner  | Loading successful: Data written to 'dev_staging.finance_2023'.
+python_etl_runner  | Starting download process
+python_etl_runner  | Created Destination folder Raw
+python_etl_runner  | Download successful: 'Raw/annual-enterprise-survey-2023-financial-year-provisional.csv' created
+python_etl_runner  | Starting Conversion to Dataframe
+python_etl_runner  | Successfully read the csv data
+python_etl_runner  | Transformed all Column names to Lower case
+python_etl_runner  | Start loading data into PostgreSQL table 'dev_staging.finance_2023'
+python_etl_runner  | Schema 'dev_staging' created successfully.
+python_etl_runner  | Loading successful: Data written to 'dev_staging.finance_2023'.
+python_etl_runner  | Transformed all Column names to Lower case
+python_etl_runner  | Start loading data into PostgreSQL table 'dev_staging.finance_2023'
+python_etl_runner  | Schema 'dev_staging' created successfully.
+python_etl_runner  | Loading successful: Data written to 'dev_staging.finance_2023'.
+python_etl_runner  | Created Destination folder Raw
+python_etl_runner  | Download successful: 'Raw/annual-enterprise-survey-2023-financial-year-provisional.csv' created
+python_etl_runner  | Starting Conversion to Dataframe
+python_etl_runner  | Successfully read the csv data
+python_etl_runner  | Transformed all Column names to Lower case
+python_etl_runner  | Start loading data into PostgreSQL table 'dev_staging.finance_2023'
+python_etl_runner  | Schema 'dev_staging' created successfully.
+python_etl_runner  | Loading successful: Data written to 'dev_staging.finance_2023'.
+
+[Kpython_etl_runner exited with code 0
+
+[Kpython_etl_runner exited with code 0
+
+[Kpython_etl_runner exited with code 0
+
+[Kpython_etl_runner exited with code 0
+dbt_runner         | [0m11:09:52  Running with dbt=1.10.13
+dbt_runner         | [0m11:09:52  Running with dbt=1.10.13
+dbt_runner         | [0m11:09:52  Running with dbt=1.10.13
+dbt_runner         | [0m11:09:52  Running with dbt=1.10.13
+dbt_runner         | [0m11:09:53  Registered adapter: postgres=1.9.1
+dbt_runner         | [0m11:09:53  Registered adapter: postgres=1.9.1
+dbt_runner         | [0m11:09:53  Registered adapter: postgres=1.9.1
+dbt_runner         | [0m11:09:53  Registered adapter: postgres=1.9.1
+dbt_runner         | [0m11:09:54  Found 2 models, 3 data tests, 1 source, 447 macros
+dbt_runner         | [0m11:09:54  Found 2 models, 3 data tests, 1 source, 447 macros
+dbt_runner         | [0m11:09:54  Found 2 models, 3 data tests, 1 source, 447 macros
+dbt_runner         | [0m11:09:54  Found 2 models, 3 data tests, 1 source, 447 macros
+dbt_runner         | [0m11:09:54  
+dbt_runner         | [0m11:09:54  
+dbt_runner         | [0m11:09:54  
+dbt_runner         | [0m11:09:54  
+dbt_runner         | [0m11:09:54  Concurrency: 1 threads (target='dev')
+dbt_runner         | [0m11:09:54  Concurrency: 1 threads (target='dev')
+dbt_runner         | [0m11:09:54  Concurrency: 1 threads (target='dev')
+dbt_runner         | [0m11:09:54  Concurrency: 1 threads (target='dev')
+dbt_runner         | [0m11:09:54  
+dbt_runner         | [0m11:09:54  
+dbt_runner         | [0m11:09:54  
+dbt_runner         | [0m11:09:54  
+postgres_db        | 2025-10-06 11:09:54.542 UTC [53] WARNING:  there is already a transaction in progress
+postgres_db        | 2025-10-06 11:09:54.542 UTC [53] WARNING:  there is already a transaction in progress
+postgres_db        | 2025-10-06 11:09:54.542 UTC [53] WARNING:  there is already a transaction in progress
+postgres_db        | 2025-10-06 11:09:54.542 UTC [53] WARNING:  there is already a transaction in progress
+postgres_db        | 2025-10-06 11:09:54.590 UTC [54] WARNING:  there is already a transaction in progress
+postgres_db        | 2025-10-06 11:09:54.590 UTC [54] WARNING:  there is already a transaction in progress
+postgres_db        | 2025-10-06 11:09:54.590 UTC [54] WARNING:  there is already a transaction in progress
+postgres_db        | 2025-10-06 11:09:54.590 UTC [54] WARNING:  there is already a transaction in progress
+postgres_db        | 2025-10-06 11:09:54.614 UTC [54] WARNING:  there is already a transaction in progress
+postgres_db        | 2025-10-06 11:09:54.614 UTC [54] WARNING:  there is already a transaction in progress
+postgres_db        | 2025-10-06 11:09:54.614 UTC [54] WARNING:  there is already a transaction in progress
+postgres_db        | 2025-10-06 11:09:54.614 UTC [54] WARNING:  there is already a transaction in progress
+dbt_runner         | [0m11:09:54  1 of 5 START test source_not_null_finance_finance_2023_value ................... [RUN]
+dbt_runner         | [0m11:09:54  1 of 5 START test source_not_null_finance_finance_2023_value ................... [RUN]
+dbt_runner         | [0m11:09:54  1 of 5 START test source_not_null_finance_finance_2023_value ................... [RUN]
+dbt_runner         | [0m11:09:54  1 of 5 START test source_not_null_finance_finance_2023_value ................... [RUN]
+postgres_db        | 2025-10-06 11:09:54.982 UTC [64] WARNING:  there is already a transaction in progress
+postgres_db        | 2025-10-06 11:09:54.982 UTC [64] WARNING:  there is already a transaction in progress
+postgres_db        | 2025-10-06 11:09:54.982 UTC [64] WARNING:  there is already a transaction in progress
+postgres_db        | 2025-10-06 11:09:54.982 UTC [64] WARNING:  there is already a transaction in progress
+dbt_runner         | [0m11:09:55  1 of 5 PASS source_not_null_finance_finance_2023_value ......................... [[32mPASS[0m in 0.37s]
+dbt_runner         | [0m11:09:55  1 of 5 PASS source_not_null_finance_finance_2023_value ......................... [[32mPASS[0m in 0.37s]
+dbt_runner         | [0m11:09:55  1 of 5 PASS source_not_null_finance_finance_2023_value ......................... [[32mPASS[0m in 0.37s]
+dbt_runner         | [0m11:09:55  1 of 5 PASS source_not_null_finance_finance_2023_value ......................... [[32mPASS[0m in 0.37s]
+dbt_runner         | [0m11:09:55  2 of 5 START test source_not_null_finance_finance_2023_variable_code ........... [RUN]
+dbt_runner         | [0m11:09:55  2 of 5 START test source_not_null_finance_finance_2023_variable_code ........... [RUN]
+dbt_runner         | [0m11:09:55  2 of 5 START test source_not_null_finance_finance_2023_variable_code ........... [RUN]
+dbt_runner         | [0m11:09:55  2 of 5 START test source_not_null_finance_finance_2023_variable_code ........... [RUN]
+postgres_db        | 2025-10-06 11:09:55.085 UTC [65] WARNING:  there is already a transaction in progress
+postgres_db        | 2025-10-06 11:09:55.085 UTC [65] WARNING:  there is already a transaction in progress
+postgres_db        | 2025-10-06 11:09:55.085 UTC [65] WARNING:  there is already a transaction in progress
+postgres_db        | 2025-10-06 11:09:55.085 UTC [65] WARNING:  there is already a transaction in progress
+dbt_runner         | [0m11:09:55  2 of 5 PASS source_not_null_finance_finance_2023_variable_code ................. [[32mPASS[0m in 0.08s]
+dbt_runner         | [0m11:09:55  2 of 5 PASS source_not_null_finance_finance_2023_variable_code ................. [[32mPASS[0m in 0.08s]
+dbt_runner         | [0m11:09:55  2 of 5 PASS source_not_null_finance_finance_2023_variable_code ................. [[32mPASS[0m in 0.08s]
+dbt_runner         | [0m11:09:55  2 of 5 PASS source_not_null_finance_finance_2023_variable_code ................. [[32mPASS[0m in 0.08s]
+dbt_runner         | [0m11:09:55  3 of 5 START test source_not_null_finance_finance_2023_year .................... [RUN]
+dbt_runner         | [0m11:09:55  3 of 5 START test source_not_null_finance_finance_2023_year .................... [RUN]
+dbt_runner         | [0m11:09:55  3 of 5 START test source_not_null_finance_finance_2023_year .................... [RUN]
+dbt_runner         | [0m11:09:55  3 of 5 START test source_not_null_finance_finance_2023_year .................... [RUN]
+postgres_db        | 2025-10-06 11:09:55.175 UTC [66] WARNING:  there is already a transaction in progress
+postgres_db        | 2025-10-06 11:09:55.175 UTC [66] WARNING:  there is already a transaction in progress
+postgres_db        | 2025-10-06 11:09:55.175 UTC [66] WARNING:  there is already a transaction in progress
+postgres_db        | 2025-10-06 11:09:55.175 UTC [66] WARNING:  there is already a transaction in progress
+dbt_runner         | [0m11:09:55  3 of 5 PASS source_not_null_finance_finance_2023_year .......................... [[32mPASS[0m in 0.08s]
+dbt_runner         | [0m11:09:55  3 of 5 PASS source_not_null_finance_finance_2023_year .......................... [[32mPASS[0m in 0.08s]
+dbt_runner         | [0m11:09:55  3 of 5 PASS source_not_null_finance_finance_2023_year .......................... [[32mPASS[0m in 0.08s]
+dbt_runner         | [0m11:09:55  3 of 5 PASS source_not_null_finance_finance_2023_year .......................... [[32mPASS[0m in 0.08s]
+dbt_runner         | [0m11:09:55  4 of 5 START sql table model dev_staging.stg_finance_2023 ...................... [RUN]
+dbt_runner         | [0m11:09:55  4 of 5 START sql table model dev_staging.stg_finance_2023 ...................... [RUN]
+dbt_runner         | [0m11:09:55  4 of 5 START sql table model dev_staging.stg_finance_2023 ...................... [RUN]
+dbt_runner         | [0m11:09:55  4 of 5 START sql table model dev_staging.stg_finance_2023 ...................... [RUN]
+postgres_db        | 2025-10-06 11:09:55.323 UTC [67] WARNING:  there is already a transaction in progress
+postgres_db        | 2025-10-06 11:09:55.323 UTC [67] WARNING:  there is already a transaction in progress
+postgres_db        | 2025-10-06 11:09:55.323 UTC [67] WARNING:  there is already a transaction in progress
+postgres_db        | 2025-10-06 11:09:55.323 UTC [67] WARNING:  there is already a transaction in progress
+dbt_runner         | [0m11:09:55  4 of 5 OK created sql table model dev_staging.stg_finance_2023 ................. [[32mSELECT 50985[0m in 0.36s]
+dbt_runner         | [0m11:09:55  4 of 5 OK created sql table model dev_staging.stg_finance_2023 ................. [[32mSELECT 50985[0m in 0.36s]
+dbt_runner         | [0m11:09:55  4 of 5 OK created sql table model dev_staging.stg_finance_2023 ................. [[32mSELECT 50985[0m in 0.36s]
+dbt_runner         | [0m11:09:55  4 of 5 OK created sql table model dev_staging.stg_finance_2023 ................. [[32mSELECT 50985[0m in 0.36s]
+dbt_runner         | [0m11:09:55  5 of 5 START sql table model dev_staging.fct_finance_2023 ...................... [RUN]
+dbt_runner         | [0m11:09:55  5 of 5 START sql table model dev_staging.fct_finance_2023 ...................... [RUN]
+dbt_runner         | [0m11:09:55  5 of 5 START sql table model dev_staging.fct_finance_2023 ...................... [RUN]
+dbt_runner         | [0m11:09:55  5 of 5 START sql table model dev_staging.fct_finance_2023 ...................... [RUN]
+postgres_db        | 2025-10-06 11:09:55.688 UTC [68] WARNING:  there is already a transaction in progress
+postgres_db        | 2025-10-06 11:09:55.688 UTC [68] WARNING:  there is already a transaction in progress
+postgres_db        | 2025-10-06 11:09:55.688 UTC [68] WARNING:  there is already a transaction in progress
+postgres_db        | 2025-10-06 11:09:55.688 UTC [68] WARNING:  there is already a transaction in progress
+dbt_runner         | [0m11:09:56  5 of 5 OK created sql table model dev_staging.fct_finance_2023 ................. [[32mSELECT 50985[0m in 0.51s]
+dbt_runner         | [0m11:09:56  5 of 5 OK created sql table model dev_staging.fct_finance_2023 ................. [[32mSELECT 50985[0m in 0.51s]
+dbt_runner         | [0m11:09:56  5 of 5 OK created sql table model dev_staging.fct_finance_2023 ................. [[32mSELECT 50985[0m in 0.51s]
+dbt_runner         | [0m11:09:56  5 of 5 OK created sql table model dev_staging.fct_finance_2023 ................. [[32mSELECT 50985[0m in 0.51s]
+postgres_db        | 2025-10-06 11:09:56.134 UTC [69] WARNING:  there is already a transaction in progress
+postgres_db        | 2025-10-06 11:09:56.134 UTC [69] WARNING:  there is already a transaction in progress
+postgres_db        | 2025-10-06 11:09:56.134 UTC [69] WARNING:  there is already a transaction in progress
+postgres_db        | 2025-10-06 11:09:56.134 UTC [69] WARNING:  there is already a transaction in progress
+dbt_runner         | [0m11:09:56  
+dbt_runner         | [0m11:09:56  
+dbt_runner         | [0m11:09:56  
+dbt_runner         | [0m11:09:56  
+dbt_runner         | [0m11:09:56  Finished running 2 table models, 3 data tests in 0 hours 0 minutes and 1.79 seconds (1.79s).
+dbt_runner         | [0m11:09:56  Finished running 2 table models, 3 data tests in 0 hours 0 minutes and 1.79 seconds (1.79s).
+dbt_runner         | [0m11:09:56  Finished running 2 table models, 3 data tests in 0 hours 0 minutes and 1.79 seconds (1.79s).
+dbt_runner         | [0m11:09:56  Finished running 2 table models, 3 data tests in 0 hours 0 minutes and 1.79 seconds (1.79s).
+dbt_runner         | [0m11:09:56  
+dbt_runner         | [0m11:09:56  
+dbt_runner         | [0m11:09:56  
+dbt_runner         | [0m11:09:56  
+dbt_runner         | [0m11:09:56  [32mCompleted successfully[0m
+dbt_runner         | [0m11:09:56  [32mCompleted successfully[0m
+dbt_runner         | [0m11:09:56  [32mCompleted successfully[0m
+dbt_runner         | [0m11:09:56  [32mCompleted successfully[0m
+dbt_runner         | [0m11:09:56  
+dbt_runner         | [0m11:09:56  
+dbt_runner         | [0m11:09:56  
+dbt_runner         | [0m11:09:56  
+dbt_runner         | [0m11:09:56  Done. PASS=5 WARN=0 ERROR=0 SKIP=0 NO-OP=0 TOTAL=5
+dbt_runner         | [0m11:09:56  Done. PASS=5 WARN=0 ERROR=0 SKIP=0 NO-OP=0 TOTAL=5
+dbt_runner         | [0m11:09:56  Done. PASS=5 WARN=0 ERROR=0 SKIP=0 NO-OP=0 TOTAL=5
+dbt_runner         | [0m11:09:56  Done. PASS=5 WARN=0 ERROR=0 SKIP=0 NO-OP=0 TOTAL=5
+
+[Kdbt_runner exited with code 0
+
+[Kdbt_runner exited with code 0
+
+[Kdbt_runner exited with code 0
+
+[Kdbt_runner exited with code 0
+postgres_db        | 2025-10-06 11:14:46.645 UTC [28] LOG:  checkpoint starting: time
+postgres_db        | 2025-10-06 11:14:46.645 UTC [28] LOG:  checkpoint starting: time
+postgres_db        | 2025-10-06 11:14:46.645 UTC [28] LOG:  checkpoint starting: time
+postgres_db        | 2025-10-06 11:14:46.645 UTC [28] LOG:  checkpoint starting: time
