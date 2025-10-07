@@ -1,0 +1,40 @@
+===== Pipeline started at Tue Oct  7 00:00:08 WAT 2025 =====
+Detected WSL Ubuntu. Configuring Conda paths.
+DB_HOST set to 192.168.160.1
+Starting Python ETL script...
+Starting download process
+Created Destination folder Raw
+Download successful: 'Raw/annual-enterprise-survey-2023-financial-year-provisional.csv' created
+Starting Conversion to Dataframe
+Successfully read the csv data
+Transformed all Column names to Lower case
+Start loading data into PostgreSQL table 'dev_staging.finance_2023'
+Schema 'dev_staging' created successfully.
+Loading successful: Data written to 'dev_staging.finance_2023'.
+
+Starting dbt transformation...
+[0m23:01:02  Running with dbt=1.10.13
+[0m23:01:03  Registered adapter: postgres=1.9.1
+[0m23:01:04  Unable to do partial parsing because profile has changed
+[0m23:01:12  Found 2 models, 3 data tests, 1 source, 447 macros
+[0m23:01:12  
+[0m23:01:12  Concurrency: 1 threads (target='dev')
+[0m23:01:12  
+[0m23:01:13  1 of 5 START test source_not_null_finance_finance_2023_value ................... [RUN]
+[0m23:01:13  1 of 5 PASS source_not_null_finance_finance_2023_value ......................... [[32mPASS[0m in 0.31s]
+[0m23:01:13  2 of 5 START test source_not_null_finance_finance_2023_variable_code ........... [RUN]
+[0m23:01:13  2 of 5 PASS source_not_null_finance_finance_2023_variable_code ................. [[32mPASS[0m in 0.23s]
+[0m23:01:13  3 of 5 START test source_not_null_finance_finance_2023_year .................... [RUN]
+[0m23:01:13  3 of 5 PASS source_not_null_finance_finance_2023_year .......................... [[32mPASS[0m in 0.20s]
+[0m23:01:13  4 of 5 START sql table model dev_staging.stg_finance_2023 ...................... [RUN]
+[0m23:01:14  4 of 5 OK created sql table model dev_staging.stg_finance_2023 ................. [[32mSELECT 50985[0m in 0.65s]
+[0m23:01:14  5 of 5 START sql table model dev_staging.fct_finance_2023 ...................... [RUN]
+[0m23:01:15  5 of 5 OK created sql table model dev_staging.fct_finance_2023 ................. [[32mSELECT 50985[0m in 0.89s]
+[0m23:01:15  
+[0m23:01:15  Finished running 2 table models, 3 data tests in 0 hours 0 minutes and 3.26 seconds (3.26s).
+[0m23:01:15  
+[0m23:01:15  [32mCompleted successfully[0m
+[0m23:01:15  
+[0m23:01:15  Done. PASS=5 WARN=0 ERROR=0 SKIP=0 NO-OP=0 TOTAL=5
+
+Tue Oct  7 00:01:20 WAT 2025: Pipeline completed successfully.
