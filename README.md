@@ -35,8 +35,8 @@ Before you begin, ensure you have the following software installed:
 
 1.  **Clone the repository:**
     ```bash
-    git clone \<your_remote_repository_url\>
-    cd \<your-project-directory\>
+    git clone <your_remote_repository_url>
+    cd <your-project-directory>
     ```
 
 2.  **Set up environment variables:**
@@ -145,6 +145,13 @@ docker compose build
 docker compose push
 ```
 
+**Pull the image**:
+    Pull the latest version of the image from the specified Docker Hub repository.
+    ```sh
+    docker pull datawithojo/dbt-runner:latest
+    docker pull datawithojo/etl-runner
+    ```
+
 ## Automating the Dockerized Pipeline
 
 A final bash script was created to automate the Docker Compose workflow for scheduling.
@@ -175,6 +182,8 @@ Follow these steps to connect Power BI to your PostgreSQL database running in th
     -   **Database:** `<your_db_name>`
     -   **Port:** `5434`
 4.  Authenticate using your `DB_USER` and `DB_PASSWORD`.
+
+![Powerbi Dashboard](./docs/powerbi-dashboard.png)
 
 ## Repository Structure
 
