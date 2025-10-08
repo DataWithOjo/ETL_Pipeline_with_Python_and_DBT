@@ -183,7 +183,7 @@ Follow these steps to connect Power BI to your PostgreSQL database running in th
     -   **Port:** `5434`
 4.  Authenticate using your `DB_USER` and `DB_PASSWORD`.
 
-![Powerbi Dashboard](./docs/powerbi-dashboard.png)
+![Powerbi Dashboard](./docs/powerbi-dashboard.PNG)
 
 ## Repository Structure
 
